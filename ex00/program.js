@@ -1,6 +1,12 @@
 function twoNumberSum(array, targetSum) {
-  // écrivez votre code ici.
+  for (let i = 0; i < array.length; i++) {
+    for (let j = 0; j < array.length; j++) {
+      if (array[i] + array[j] == targetSum && i != j) {
+        return [array[i], array[j]];
+      }
+    }
+  }
+  return [];
 }
 
-// Merci de ne pas effacer la ligne en dessous.
 exports.twoNumberSum = twoNumberSum;
