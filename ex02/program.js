@@ -1,6 +1,13 @@
 function threeLargestNumbers(array) {
-  // écrivez votre code ici.
+  let arrayMax = [];
+  for (let i = 0; i < 3; i++) {
+    let max = Math.max(...array);
+    arrayMax.push(max);
+    array.splice(array.indexOf(max), 1);
+  }
+  arrayMax.sort((a, b) => a - b);
+  return arrayMax;
 }
 
-// Merci de ne pas effacer la ligne en dessous.
+console.log(threeLargestNumbers(array));
 exports.threeLargestNumbers = threeLargestNumbers;
