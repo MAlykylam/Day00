@@ -4,10 +4,10 @@ function isPalindrome(string) {
 
   for (let i = 0; i < len / 2; i++) {
     if (string[i] !== string[len - 1 - i]) {
-      return "false";
+      return false;
     }
   }
-  return "true";
+  return true;
 }
 
 const string = prompt("Tapez le mot: ");
